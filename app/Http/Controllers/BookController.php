@@ -60,7 +60,7 @@ class BookController extends Controller
         return view("books.delete-confirmation", compact(["book", "title"]));
     }
 
-    public function destroy(): RedirectResponse
+    public function destroy()
     {
         \request()->validate([
             "id" => "required|numeric",
